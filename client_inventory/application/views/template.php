@@ -150,7 +150,7 @@
 						<li class="sidebar-item">
 							<a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" onclick="loadMenu('<?= base_url('departemen'); ?>')" aria-expanded="false">
 								<i class="mdi mdi-account-network"></i><span class="hide-menu">
-									Departement
+									Departemen
 								</span>
 							</a>
 						</li>
@@ -205,7 +205,7 @@
 			<div class="page-breadcrumb">
 				<div class="row align-items-center">
 					<div class="col-5">
-						<h4 class="page-title">Starter Page</h4>
+						<h4 class="page-title">Selamat Datang DI dunia Fantasi</h4>
 					</div>
 				</div>
 			</div>
@@ -223,7 +223,7 @@
 					<div class="col-12">
 						<div class="card">
 							<div class="card-body" id="kontenTemplate">
-								Ora iso tampil wayahe buko cah
+								Saya Suka Kamu
 							</div>
 						</div>
 					</div>
