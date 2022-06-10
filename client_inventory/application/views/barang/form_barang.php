@@ -42,7 +42,7 @@ form-control-line form-user-input" name="nama_barang" id="nama_barang">
 		if ($titel == 'Form Edit Data Barang') {
 			echo "var link = 'http://localhost/Web_Inventory/backend_inventory/barang/update_action/';";
 		} else {
-			echo "var link = 'http://localhost/Web_Inventory/backend_inventory/create_action';";
+			echo "var link = 'http://localhost/Web_Inventory/backend_inventory/barang/create_action';";
 		}
 		?>
 
