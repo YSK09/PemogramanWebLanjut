@@ -4,10 +4,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Barang_model extends CI_Model
 {
 
-    public function get_barang()
+    public function get_barang($cari_nama = '', $cari_deskripsi = '', $cari_stok = '') 
     {
         $this->db->select('*');
         $this->db->from('barang');
+        $this->db->where('status_delete', 0);
+
+        if ($cari_nama != '' && $cari_nama != null) {
+            $this->db->like('nama_barang', $cari_nama);
+        }
+
+        if ($cari_deskripsi != '' && $cari_deskripsi != null) {
+            $this->db->like('deskripsi', $cari_deskripsi);
+        }
+
+        if ($cari_stok != '' && $cari_nama != null) {
+            $this->db->where('stok <=', $cari_stok);
+        }
         return $this->db->get();
     }
 
@@ -28,5 +41,21 @@ class Barang_model extends CI_Model
     {
         $this->db->where('id_barang', $id_barang);
         $this->db->update('barang', $data);
+    }
+
+    public function hapus_data($id_barang) {
+        $this->db->where('id_barang', $id_barang);
+        $this->db->delete('barang');
+
+    }
+
+    public function soft_delete_data($id_barang) {
+
+        $data = array(
+            'status_delete' => 1
+        );
+        $this->db->where('id_barang', $id_barang);
+        $this->db->update('barang',$data);
+
     }
 };
