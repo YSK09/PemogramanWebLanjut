@@ -18,7 +18,7 @@ class Barang_model extends CI_Model
             $this->db->like('deskripsi', $cari_deskripsi);
         }
 
-        if ($cari_stok != '' && $cari_nama != null) {
+        if ($cari_stok != '' && $cari_stok != null) {
             $this->db->where('stok <=', $cari_stok);
         }
         return $this->db->get();
